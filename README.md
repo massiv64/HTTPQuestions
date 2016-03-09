@@ -9,7 +9,7 @@ __URLs__
 	* `https://workbook.galvanize.com/cohorts/41/learning_experiences/367` || ```https is the protocol, workbook.galvanize.com is the domain, the port is invisible to the user but being implimented by the browser, and cohorts/41/learning_experiences/367 is the pathway ```
 	* `http://locahost:5000/animals/puppies?onlycute=1&size=medium#firstpuppy` || ```http is the protocol, localhost is the domain, 5000 is the port, /animals/puppies is the pathway to the query search, /?onlycute=1&size=medium is our query search, with keys and values to help traverse the raw data, and #firstpuppy is an anchor that should take us directly to a specific part of the page that we've searched for```
 	* `https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_Error`
-* Can a server use more than 1 port?
+* Can a server use more than 1 port?```yes, each port represents	a different pathway for certain types of data```
 * Why is https different than http?```https refers to a secure protocol, while http is an unsecure protocol```
 * How does a server interpret the following url's query paramter.  What data structure does it create on the server?```the server will interpret the query parameters as the key of puppies with the value of fido, the value of max, and the value of moxie. it will return an object with those keys and values```
 
