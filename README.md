@@ -3,11 +3,11 @@
 __URLs__
 
 * Name all of the parts of the url that you can remember.  In your own words describe what they do.
-* ```protocol, domain, port, query search. protocol refers to whether the website is secure or not (hhtp vs https), domain names are created for human viewing to make it clear what web page the user wants to navigate to, the port is usually invisible to the user, but is attached to every domain. default ports are attached for either secure or insecure webpages, Query searches are defined by a /? followed by a collection of keys and values relating to data within a webpage```
+* ```protocol, domain, port, query string. protocol refers to whether the website is secure or not (hhtp vs https), domain names are created for human viewing to make it clear what web page the user wants to navigate to, the port is usually invisible to the user, but is attached to every domain. default ports are attached for either secure or insecure webpages. The path is the object path to the file in which we want to view. http://www.website.com/us/stuff/files as an example, everything after the first "/" is the filepath. Query strings are defined by a /? followed by a collection of keys and values relating to data within a webpage```
 * Name the pieces of the following urls:
 	* `https://www.google.com/` || ```https is the protocol, www.google.com is the domain name, which is for humans to recognize what web page they want to navigate to```
 	* `https://workbook.galvanize.com/cohorts/41/learning_experiences/367` || ```https is the protocol, workbook.galvanize.com is the domain, the port is invisible to the user but being implimented by the browser, and cohorts/41/learning_experiences/367 is the pathway ```
-	* `http://locahost:5000/animals/puppies?onlycute=1&size=medium#firstpuppy` || ```http is the protocol, localhost is the domain, 5000 is the port, /animals/puppies is the pathway to the query search, /?onlycute=1&size=medium is our query search, with keys and values to help traverse the raw data, and #firstpuppy is an anchor that should take us directly to a specific part of the page that we've searched for```
+	* `http://locahost:5000/animals/puppies?onlycute=1&size=medium#firstpuppy` || ```http is the protocol, localhost is the domain, 5000 is the port, /animals/puppies is the pathway to the query string, /?onlycute=1&size=medium is our query string, with keys a, and #firstpuppy is an anchor that should take us directly to a specific part of the page that we've searched for```
 	* `https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_Error`
 * Can a server use more than 1 port?```yes, each port represents	a different pathway for certain types of data```
 * Why is https different than http?```https refers to a secure protocol, while http is an unsecure protocol```
@@ -35,7 +35,7 @@ __HTTP Request/Response__
 	* User-agent```request```
 	* Set-cookies```response```
 	* Cache-control```response```
-	* Cookie```both```
+	* Cookie```request```
 * Is the following a http request or response?  How do you know for each?
 
 ```
@@ -77,7 +77,7 @@ Connection: keep-alive
   </body>
 </html>
 ```
-``` ```The example above me is a request, you can tell because there is an Accept header```
+``` ```The example above me is a response, we can tell because there is HTML under the AJAX text```
 
 ```
 DELETE /students/n1vmyrw3x HTTP/1.1
@@ -86,7 +86,7 @@ Accept: application/json
 Cache-Control: no-cache
 Postman-Token: 0041e3c3-efdb-f0c3-b2f4-2d79f6d0f44b
 ```
-```The example above this text is a response, because of the cache-control header```
+```The example above this text is a delete request, because it is listed as a "delete" method, and there is no data following it ```
 __JSON__
 
 * Describe what JSON is.  What is it used for.
@@ -94,7 +94,7 @@ __JSON__
 * Convert the following map into a javascript object then console log the age.
 
 ```
-{ "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}
+{"company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}
 ```
 * Convert the following to a javascript object.  Console log each company name.
 
